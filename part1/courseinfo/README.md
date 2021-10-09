@@ -1,2 +1,2 @@
-# part2 of bootcamp fullstackopen
+# part1 of bootcamp fullstackopen
 exercise: courseinfo
