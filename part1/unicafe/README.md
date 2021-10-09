@@ -1,2 +1,2 @@
-# part1 of bootcamp fullstackopen
+# part1 of fullstackopen bootcamp
 exercise: unicafe
