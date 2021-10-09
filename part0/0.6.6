@@ -1,0 +1,10 @@
+title PART 0: EX 0.6
+
+note over browser:
+browser starts executing js-code
+that requests redrawNotes() from code, 
+and send the new note to server
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server-->browser: not redirection
