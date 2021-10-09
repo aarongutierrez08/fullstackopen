@@ -54,10 +54,10 @@ const App = () => {
       <Filter handle={handleFilterPerson} />
       <h2>Add a new</h2>
       <PersonForm addPerson={addPerson}
-        handlePersonChange={handlePersonChange}
-        handleNumberChange={handleNumberChange}
-        newName={newName}
-        newNumber={newNumber}
+                  handlePersonChange={handlePersonChange}
+                  handleNumberChange={handleNumberChange}
+                  newName={newName}
+                  newNumber={newNumber}
       />
       <h2>Numbers</h2>
       <Persons persons={persons} filter={filter}/>

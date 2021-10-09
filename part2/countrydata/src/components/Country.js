@@ -1,19 +1,9 @@
-import React, {useState} from "react"
+import React from "react"
 import Weather from "./Weather"
 
-//const Country = ({country, filters, handleShow}) => {
-const Country = ({country, filters}) => {
-    
-    const initialFiltered = country.filter(c => c["name"].toLowerCase().includes(filters))
-    
-    const [filtered, setFiltered] = useState([initialFiltered])
+const Country = ({country, filters, handleShow}) => {
 
-    //const filtered = country.filter(c => c["name"].toLowerCase().includes(filters))
-
-    const handleShow = (event) => {
-        //console.log(event.target.id);
-        setFiltered(event.target.id.toString().toLowerCase())
-      }
+    const filtered = country.filter(c => c["name"].toLowerCase().includes(filters))
 
     if (filtered.length > 10) {
         return (
@@ -38,7 +28,7 @@ const Country = ({country, filters}) => {
     if (filtered.length === 1) {
         
         return (
-            <div>
+            <>
                 <h1>{filtered[0].name}</h1>
                 <p>capital: {filtered[0].capital}</p>
                 <p>population: {filtered[0].population}</p>
@@ -48,9 +38,11 @@ const Country = ({country, filters}) => {
                         <li key={l.name}> {l.name} </li>
                     )}
                 </ul>
+                <div>
                     <img alt={filtered[0].name} src={filtered[0].flag} width="200" height="100" />
+                </div>
                 <Weather filters={filtered[0].name} />
-            </div>
+            </>
         )
     }
 

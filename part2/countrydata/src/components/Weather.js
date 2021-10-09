@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 
@@ -22,7 +21,6 @@ const Weather = (props) => {
             <p>loanding...</p>
         )
     }
-    
     return (
       <>
         <h2>Weather in {weather.location.name}</h2>

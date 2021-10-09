@@ -5,7 +5,6 @@ const Headers = ({ course }) => {
   }
   
   const Total = ({ course }) => {
-    //const sum = course.parts[0].exercises + course.parts[1].exercises + course.parts[2].exercises + course.parts[3].exercises
     const exercises = course.parts.map(e => e.exercises)
     const total = exercises.reduce((s, p) => {
       console.log('what is happening', s, p)
@@ -13,7 +12,7 @@ const Headers = ({ course }) => {
     })
     console.log(total);
     return(
-      <p><strong>Number of exercises {total}</strong></p>
+      <p><strong>Number of exercises: {total}</strong></p>
     ) 
   }
   

@@ -7,8 +7,8 @@ const Button = ({handleClick, text}) => <button onClick={handleClick}>{text}</bu
 
 const Statistics = ({good, neutral, bad}) => {
   const all = (good + neutral + bad)
-  const average = ((good - bad) / all)
-  const positive = (good * 100 / all + " %")
+  const average = ((good - bad) / all).toFixed(2)
+  const positive = (good * 100 / all).toFixed(2) + " %"
 
   if (all === 0){
     return <p>no feedback given</p>

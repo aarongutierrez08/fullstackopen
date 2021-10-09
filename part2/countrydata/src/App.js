@@ -6,11 +6,10 @@ import Country from "./components/Country"
 const App = () => {
   const [country, setCountry] = useState([])
   const [filters, setFilters] = useState("")
-  const [newFilters, setNewFilters] = useState("")
 
   useEffect(() => {
     axios
-      .get("https://restcountries.eu/rest/v2/all")
+      .get("https://restcountries.com/v2/all")
       .then(response => {
         setCountry(response.data)
       })
@@ -22,14 +21,13 @@ const App = () => {
 
   const handleShow = (event) => {
     //console.log(event.target.id);
-    //setFilters(event.target.id.toString().toLowerCase())
-    setNewFilters(event.target.id.toString().toLowerCase())
+    setFilters(event.target.id.toString().toLowerCase())
   }
 
   return (
     <>
       <Filter filters={filters} handleFilterChange={handleFilterChange} />
-      <Country filters={filters} newFilters={newFilters} country={country} handleShow={handleShow} />
+      <Country filters={filters} country={country} handleShow={handleShow} />
     </>
   )
 }
