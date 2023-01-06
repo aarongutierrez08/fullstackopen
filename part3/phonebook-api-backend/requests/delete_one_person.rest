@@ -1,0 +1,2 @@
+DELETE https://stormy-anchorage-19422.herokuapp.com/api/persons/4
+Content-Type: application/json
